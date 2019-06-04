@@ -163,8 +163,41 @@ for(int f=0;f<tamano;f++)
            cont_victoria++;
            if(f!=0&&f!=tamano-1&&c!=0&&f!=tamano-1) {
                if (tablero[f + 1][c] == 0 || tablero[f - 1][c] == 0 || tablero[f][c + 1] == 0 ||
-                   tablero[f][c - 1] == 0) {
+                   tablero[f][c - 1] == 0) 
                    cont_derrota++;
+              //Esquinas
+                 if (f==0&&c==0) 
+                 {if (tablero[f + 1][c] == 0|| tablero[f][c+1] == 0) 
+                   cont_derrota++;}
+              
+               if (f==0&&c==tamano-1)
+                 {if (tablero[f - 1][c] == 0|| tablero[f][c - 1] == 0) 
+                   cont_derrota++;}
+              
+               if (f==tamano-1&&c==0)
+                 {if (tablero[f - 1][c] == 0|| tablero[f][c + 1] == 0) 
+                   cont_derrota++;}
+              
+               if (f==tamano-1&&c==tamano-1)
+                 {if (tablero[f - 1][c] == 0|| tablero[f][c - 1] == 0) 
+                   cont_derrota++;}
+              //Bordes 
+              if (f==0&&c!=0&&c!=tamano-1)
+                 {if (tablero[f + 1][c] == 0|| tablero[f][c + 1] == 0|| tablero[f][c - 1] == 0) 
+                   cont_derrota++;}
+              
+              if (f==tamano-1&&c!=0&&c!=tamano-1)
+                 {if (tablero[f - 1][c] == 0|| tablero[f][c + 1] == 0|| tablero[f][c - 1] == 0) 
+                   cont_derrota++;}
+              
+              if (c==0&&f!=0&&f!=tamano-1)
+                 {if (tablero[f+1][c] == 0|| tablero[f-1][c] == 0|| tablero[f][c+1] == 0) 
+                   cont_derrota++;}
+              
+              if (c==tamano-1&&f!=0&&f!=tamano-1)
+                 {if (tablero[f - 1][c] == 0|| tablero[f+1][c] == 0|| tablero[f][c - 1] == 0) 
+                   cont_derrota++;}
+              
                }
            }
        }
