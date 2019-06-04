@@ -12,7 +12,7 @@ using namespace std;
 
 
 
-void menu(int & opcion,int & tablero);
+void menu(int & opcion,int & tablero,bool & game_running, bool & running);
 void crea_matriz(vector< vector< int > >& tablero,unsigned int tamano,unsigned int opcion);
 void imprime_matriz(vector< vector< int > >& tablero, unsigned int tamano);
 void mueve_ficha(vector<vector<int>>& tablero, int tamano);
