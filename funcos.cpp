@@ -96,7 +96,7 @@ void imprime_matriz(vector< vector< int > >& tablero, unsigned int tamano)
             if (tablero[f][c]==9)
                 cout<<"   ";
             if (tablero[f][c]==0)
-                cout<<" 0 ";
+                cout<<" o ";
             if (tablero[f][c]==1)
                 cout<<" + ";
 
