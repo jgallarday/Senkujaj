@@ -230,4 +230,5 @@ else if(cont_derrota==0)
 cout<<endl<<"Game over"<<endl;
 running=false;
 }
+    
 }
