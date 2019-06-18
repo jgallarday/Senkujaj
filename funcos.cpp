@@ -147,6 +147,10 @@ void mueve_ficha(vector<vector<int>>& tablero, int tamano)
             cout<<endl<<"Debe seleccionar un espacio vacio"<<endl;
     }while(tablero[f2][c2]==9||tablero[f2][c2]==0);
 
+    if(f1!=0&&f1!=tamano-1&&c1!=0&&c1!=tamano-1)
+    {
+        
+        
     if (f1+2==f2&&c1==c2)
     {
         if(tablero[f1+1][c1]==0) {
@@ -176,6 +180,175 @@ void mueve_ficha(vector<vector<int>>& tablero, int tamano)
     }
     else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
 }
+
+else if (f1==0&&c1==0)
+{
+     if (f1+2==f2&&c1==c2)
+    {
+        if(tablero[f1+1][c1]==0) {
+            tablero[f1][c1] = 1;
+            tablero[f1 + 1][c1] = 1;
+            tablero[f1 + 2][c1] = 0;
+        }
+
+     }
+    else if (c1+2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1+1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1+1]=1;tablero[f1][c1+2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (f1==0&&c1==tamano-1)
+{
+     if (f1+2==f2&&c1==c2)
+    {
+        if(tablero[f1+1][c1]==0) {
+            tablero[f1][c1] = 1;
+            tablero[f1 + 1][c1] = 1;
+            tablero[f1 + 2][c1] = 0;
+        }
+
+    }
+    else if (c1-2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1-1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1-1]=1;tablero[f1][c1-2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (f1==tamano-1&&c1==0)
+{
+    if (f1-2==f2&&c1==c2)
+    {
+        if(tablero[f1-1][c1]==0) {
+            tablero[f1][c1]=1;tablero[f1-1][c1]=1;tablero[f1-2][c1]=0;
+        }
+    }
+    else if (c1+2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1+1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1+1]=1;tablero[f1][c1+2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (f1==tamano-1&&c1==tamano-1)
+{
+    if (f1-2==f2&&c1==c2)
+    {
+        if(tablero[f1-1][c1]==0) {
+            tablero[f1][c1]=1;tablero[f1-1][c1]=1;tablero[f1-2][c1]=0;
+        }
+    }
+    else if (c1-2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1-1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1-1]=1;tablero[f1][c1-2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (f1==0)
+{
+     if (f1+2==f2&&c1==c2)
+    {
+        if(tablero[f1+1][c1]==0) {
+            tablero[f1][c1] = 1;
+            tablero[f1 + 1][c1] = 1;
+            tablero[f1 + 2][c1] = 0;
+        }
+
+    }
+    else if (c1+2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1+1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1+1]=1;tablero[f1][c1+2]=0;
+        }
+    }
+    else if (c1-2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1-1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1-1]=1;tablero[f1][c1-2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (f1==tamano-1)
+{
+ if (f1-2==f2&&c1==c2)
+    {
+        if(tablero[f1-1][c1]==0) {
+            tablero[f1][c1]=1;tablero[f1-1][c1]=1;tablero[f1-2][c1]=0;
+        }
+    }
+    else if (c1+2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1+1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1+1]=1;tablero[f1][c1+2]=0;
+        }
+    }
+    else if (c1-2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1-1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1-1]=1;tablero[f1][c1-2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (c1==0)
+{
+     if (f1+2==f2&&c1==c2)
+    {
+        if(tablero[f1+1][c1]==0) {
+            tablero[f1][c1] = 1;
+            tablero[f1 + 1][c1] = 1;
+            tablero[f1 + 2][c1] = 0;
+        }
+
+    }
+    else if (f1-2==f2&&c1==c2)
+    {
+        if(tablero[f1-1][c1]==0) {
+            tablero[f1][c1]=1;tablero[f1-1][c1]=1;tablero[f1-2][c1]=0;
+        }
+    }
+    else if (c1+2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1+1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1+1]=1;tablero[f1][c1+2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}
+else if (c1==tamano-1)
+{
+     if (f1+2==f2&&c1==c2)
+    {
+        if(tablero[f1+1][c1]==0) {
+            tablero[f1][c1] = 1;
+            tablero[f1 + 1][c1] = 1;
+            tablero[f1 + 2][c1] = 0;
+        }
+
+    }
+    else if (f1-2==f2&&c1==c2)
+    {
+        if(tablero[f1-1][c1]==0) {
+            tablero[f1][c1]=1;tablero[f1-1][c1]=1;tablero[f1-2][c1]=0;
+        }
+    }
+    else if (c1-2==c2&&f1==f2)
+    {
+        if(tablero[f1][c1-1]==0) {
+            tablero[f1][c1]=1;tablero[f1][c1-1]=1;tablero[f1][c1-2]=0;
+        }
+    }
+    else cout<<endl<<"Trataste de hacer una jugada invalida"<<endl;
+}}
+
 
 void detecta_fichas(vector<vector<int>>& tablero, int tamano, bool& running)
 {
@@ -235,11 +408,12 @@ void detecta_fichas(vector<vector<int>>& tablero, int tamano, bool& running)
     if(cont_victoria==1)
     {
         cout<<endl<<"Felicitaciones, ganaste!!!"<<endl;
+        cout<<"WUUUUUU"<<endl;
         running=false;
     }
     else if(cont_derrota==0)
     {
-        cout<<endl<<"Game over"<<endl;
+        cout<<endl<<"GAME OVER"<<endl;
         running=false;
     }
 }
